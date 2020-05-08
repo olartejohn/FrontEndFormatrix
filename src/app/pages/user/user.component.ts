@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormacionesService } from 'src/app/services/formaciones.service';
 import { UtilidadService } from 'src/app/services/utilidades.service';
+import { Formacion } from 'src/app/models/formacion.model';
 
 @Component({
   selector: "app-user",
@@ -9,6 +10,9 @@ import { UtilidadService } from 'src/app/services/utilidades.service';
 export class UserComponent implements OnInit {
   constructor(public formacionService: FormacionesService, public utilidadService : UtilidadService ) {}
   listaTipos :  Array<any>;
+  formacion = new Formacion();
+
+
   ngOnInit() {
       this.obtenerParametros();
      // this.obtenerUtilidades();
