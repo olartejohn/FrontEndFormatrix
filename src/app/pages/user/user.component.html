@@ -1,86 +1,74 @@
 
+
 <div class=" content">
   <div class=" row">
     <div class=" col-md-8">
       <div class=" card">
-
         <div class="container">
           <h2><p>Crear formaciones</p></h2>
-      <form>
-          <div class="form-group">
-              <label for="exampleInputNombre1">Nombre</label>
-              <input type="input" class="form-control" id="exampleInputNombre1" aria-describedby="emailHelp" name ="nombre" [(ngModel)]="formacion.nombre" >
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Fecha</label>
-              <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="date" [(ngModel)]="formacion.date">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-              <label for="exampleTipo">Tipo</label>
-              <div class="form-group">
-                  <label for="sel1">Select list:</label>
-                  <select class="form-control" id="sel1" name ="tipo"   >
-                    <option  *ngFor = "let tipo of listaTipos">{{tipo.nombre}}</option>
-                  </select>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputNombre1">Nombre</label>
+                    <input type="input" class="form-control" id="exampleInputNombre1" aria-describedby="emailHelp" name ="nombre" [(ngModel)]="formacion.nombre" >
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-      
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Profesor</label>
-              <input type="input" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="profesor" [(ngModel)]="formacion.profesor">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>  
-          <div class="form-group">
-              <label for="exampleInputEmail1">Formador</label>
-              <input type="input" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="formador" [(ngModel)]="formacion.formador">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-      
-          <div class="form-group">
-              <label for="exampleInputEmail1">Competencias</label>
-              <div class="form-group">
-                  <label for="sel1">Select list:</label>
-                  <select class="form-control" id="sel1" name ="comptencia" [(ngModel)]="formacion.competencias" >
-                    <option *ngFor = "let competencia of listaCompetencias">{{competencia}}</option>
-                  </select>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Fecha</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="date" [(ngModel)]="formacion.date">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>  
-          <div class="form-group">
-              <label for="exampleInputEmail1">Acuerdos</label>
-              <textarea type="input" class="form-control" rows="4" id="exampleInputEmail1" aria-describedby="emailHelp" cols="30" rows="4" name ="acuerdos" [(ngModel)]="formacion.acuerdos"></textarea>
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Habilitador</label>
-              <div class="form-group">
-                  <label for="sel1">Select list:</label>
-                  <select class="form-control" id="sel1" name ="habilitador" [(ngModel)]="formacion.habilitadores">
-                    <option *ngFor = "let competencia of listaCompetencias">{{competencia}}</option>
-                  </select>
+                <div class="form-group">
+                    <label for="exampleTipo">Tipo de formación:</label>
+                    <div class="form-group">
+                        <select class="form-control" id="sel1" name ="tipo"   >
+                          <option  *ngFor = "let tipo of listaTipos">{{tipo.nombre}}</option>
+                        </select>
+                      </div>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>  
-          <div class="form-group">
-              <label for="exampleInputEmail1">Responsable</label>
-              <input type="input" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="responsable" [(ngModel)]="formacion.responsable">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-      
-          <button type="submit" class="btn btn-primary" (click)="save()">Crear</button>
-        </form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Profesor</label>
+                    <input type="input" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="profesor" [(ngModel)]="formacion.profesor">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>  
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Formador</label>
+                    <input type="input" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="formador" [(ngModel)]="formacion.formador">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Competencias</label>
+                    <div class="form-group">                 
+                        <select class="form-control" id="sel1" name ="competencia"   >
+                          <option  *ngFor = "let competencia of listaCompetencias">{{competencia.nombre}}</option>
+                        </select>
+                      </div>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>  
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Acuerdos</label>
+                    <textarea type="input" class="form-control" rows="4" id="exampleInputEmail1" aria-describedby="emailHelp" cols="30" rows="4" name ="acuerdos" [(ngModel)]="formacion.acuerdos"></textarea>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Habilitador</label>
+                    <div class="form-group">                  
+                      <select class="form-control" id="hab1" name ="habilitador">
+                        <option  *ngFor = "let habilitador of listaHabilitadores">{{habilitador.nombre}}</option>
+                      </select>
+                      </div>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>  
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Responsable</label>
+                    <input type="input" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name ="responsable" [(ngModel)]="formacion.responsable">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+            
+                <button type="submit" class="btn btn-primary" (click)="save()">Crear</button>
+              </form>
       </div>
-
-
-
-
-
-
-
-        <div class=" card-header"><h5 class=" title">Edit Profile</h5></div>
+    <!--    <div class=" card-header"><h5 class=" title">Edit Profile</h5></div>
         <div class=" card-body">
           <form>
             <div class=" row">
@@ -261,5 +249,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
+
+
 </div>

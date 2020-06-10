@@ -13,7 +13,7 @@ export class FormacionesComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("Me ejecute");
-    this.formacionService.obtenerUsuario();
+ //   this.formacionService.obtenerUsuario();
 
   }
 

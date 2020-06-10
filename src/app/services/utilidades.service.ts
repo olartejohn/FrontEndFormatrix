@@ -37,9 +37,9 @@ obtenerUtilidad()  : Observable<any> {
   
 getUtilidad() : Observable<any> {
   let url = "http://localhost:3000" + '/utilidades'; 
-
+   // let url= "https://jsonplaceholder.typicode.com/users";
   //return this.http.get(url).pipe(map(data => {}));
- return this.http.get<any>(url);
+    return this.http.get<any>(url);
   }
 
 

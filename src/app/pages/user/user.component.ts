@@ -8,20 +8,26 @@ import { Formacion } from 'src/app/models/formacion.model';
   templateUrl: "user.component.html"
 })
 export class UserComponent implements OnInit {
-  constructor(public formacionService: FormacionesService, public utilidadService : UtilidadService ) {}
+  
   listaTipos :  Array<any>;
+  listaCompetencias :  Array<any>;
+  listaHabilitadores :  Array<any>;
   formacion = new Formacion();
 
-
-  ngOnInit() {
-      this.obtenerParametros();
-     // this.obtenerUtilidades();
-      console.log("Me ejecute");
-    
+  constructor(public formacionService: FormacionesService, public utilidadService : UtilidadService ) {
+    this.listaTipos =  new Array<any>();
+    this.listaCompetencias =  new Array<any>();
+    this.listaHabilitadores = new Array<any>();
 
   }
+  
+  ngOnInit() {
+      //this.obtenerParametros();
+      this.obtenerUtilidades();
+      console.log("Me ejecute");
+  }
 
-  obtenerParametros(){
+ /* obtenerParametros(){
 
     this.utilidadService.obtenerUtilidad()
       .subscribe(result => {
@@ -29,18 +35,18 @@ export class UserComponent implements OnInit {
         this.listaTipos= result;
       });
       console.log("lista tipos++++++++++"+this.listaTipos);
-  }
+  }*/
 
-  
   obtenerUtilidades(){
 
     this.utilidadService.getUtilidad()
       .subscribe((data) => {
            console.log(data)
-           this.listaTipos.push(data);   
+           this.listaTipos = data.datos; 
+           this.listaCompetencias = data.datos;  
+           this.listaHabilitadores = data.datos;
       });
      // console.log("lista tipos++++++++++"+this.listaTipos);
-  }
-      
+  }      
       
 }
